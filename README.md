@@ -27,9 +27,22 @@ Ouvrir [http://localhost:5173](http://localhost:5173).
 | `npm run build`   | Build de production dans `dist/` |
 | `npm run preview` | Prévisualiser le build         |
 
-## Déploiement (GitHub Pages)
+## Déploiement
 
-Le dépôt est configuré pour un déploiement automatique sur GitHub Pages à chaque push sur `main`.
+### Netlify (gratuit)
+
+1. Crée un compte sur [netlify.com](https://www.netlify.com).
+2. **Add new site → Import an existing project** → connecte ton repo Git (GitHub/GitLab/Bitbucket).
+3. Netlify détecte Vite : **Build command** = `npm run build`, **Publish directory** = `dist`.
+4. Déploie. Le fichier `netlify.toml` configure déjà les redirections SPA et le cache des assets.
+
+Le site sera en `https://<ton-site>.netlify.app`. Le plan gratuit convient pour ce projet.
+
+Le formulaire de contact est compatible **Netlify Forms** : les soumissions apparaissent dans le dashboard Netlify (**Forms**). Le plan gratuit inclut 100 envois/mois.
+
+### GitHub Pages
+
+Le dépôt est aussi configuré pour un déploiement automatique sur GitHub Pages à chaque push sur `main`.
 
 1. Dans le dépôt GitHub : **Settings → Pages**
 2. **Source** : GitHub Actions

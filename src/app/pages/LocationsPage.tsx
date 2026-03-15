@@ -152,14 +152,7 @@ export function LocationsPage() {
       {/* Locations Grid with Accordion */}
       <section className="py-24 px-6 lg:px-12 bg-gray-50">
         <div className="max-w-[1200px] mx-auto">
-          <h2 
-            className="text-3xl md:text-4xl text-center mb-4"
-            style={{ 
-              fontFamily: 'Poppins, sans-serif', 
-              fontWeight: 600,
-              color: 'primary'
-            }}
-          >
+          <h2 className="text-3xl md:text-4xl text-center mb-4 font-semibold text-primary">
             Campus Concordia
           </h2>
           <p 
@@ -254,12 +247,11 @@ className="text-lg font-semibold text-primary"
             ))}
           </div>
 
-          {/* Expand All Button */}
           <div className="text-center">
             <button
+              type="button"
               onClick={toggleExpandAll}
-              className="mt-8 inline-flex items-center gap-2 px-12 py-4 bg-[primary] text-white rounded-[28px] hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl"
-              style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 500 }}
+              className="mt-8 inline-flex items-center justify-center gap-2 px-12 py-4 bg-primary text-white rounded-[28px] hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl font-medium"
             >
               {expandAll ? <Minimize2 size={20} /> : <Maximize2 size={20} />}
               {expandAll ? 'Réduire tout' : 'Développer tout'}

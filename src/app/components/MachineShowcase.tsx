@@ -16,6 +16,7 @@ export function MachineShowcase() {
                 src={machineFullImage}
                 alt="Machine Confandi - vue complète"
                 className="w-full h-[400px] object-cover"
+                loading="lazy"
               />
             </div>
             <div className="rounded-[28px] overflow-hidden shadow-lg">
@@ -23,6 +24,7 @@ export function MachineShowcase() {
                 src={interfaceImage}
                 alt="Détail de l'interface Confandi"
                 className="w-full h-[280px] object-cover"
+                loading="lazy"
               />
             </div>
             <div className="rounded-[28px] overflow-hidden shadow-lg">
@@ -30,6 +32,7 @@ export function MachineShowcase() {
                 src={closeupImage}
                 alt="Café premium Confandi"
                 className="w-full h-[280px] object-cover"
+                loading="lazy"
               />
             </div>
           </div>

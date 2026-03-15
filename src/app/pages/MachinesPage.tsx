@@ -42,25 +42,28 @@ export function MachinesPage() {
         <div className="max-w-[1200px] mx-auto">
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             <div className="md:col-span-2 rounded-[32px] overflow-hidden shadow-xl">
-              <img 
+              <img
                 src={machineFullImage}
                 alt="Machine Confandi - vue complète"
                 className="w-full h-[500px] object-cover"
+                loading="lazy"
               />
             </div>
             <div className="space-y-8">
               <div className="rounded-[28px] overflow-hidden shadow-lg">
-                <img 
+                <img
                   src={interfaceImage}
                   alt="Détail de l'interface Confandi"
                   className="w-full h-[240px] object-cover"
+                  loading="lazy"
                 />
               </div>
               <div className="rounded-[28px] overflow-hidden shadow-lg">
-                <img 
+                <img
                   src={closeupImage}
                   alt="Café premium Confandi"
                   className="w-full h-[240px] object-cover"
+                  loading="lazy"
                 />
               </div>
             </div>

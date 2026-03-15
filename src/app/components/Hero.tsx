@@ -85,6 +85,7 @@ export function Hero() {
                     src={cups[currentCup]}
                     alt={currentCup === 0 ? "Café Confandi avec latte art" : "Tasse Confandi fermée"}
                     className="w-full h-full object-contain drop-shadow-2xl"
+                    fetchPriority="high"
                   />
                 </motion.div>
               </motion.div>

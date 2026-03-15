@@ -1,5 +1,7 @@
-import { ArrowRight, Mail, Phone, MapPin } from 'lucide-react';
+import { ArrowRight, Mail, Phone, MapPin, CheckCircle, AlertCircle } from 'lucide-react';
 import { useState } from 'react';
+
+const FORM_NAME = 'contact';
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -8,13 +10,43 @@ export function ContactForm() {
     phone: '',
     organization: '',
     reason: '',
-    message: ''
+    message: '',
+    'bot-field': ''
   });
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const encode = (data: Record<string, string>) =>
+    Object.keys(data)
+      .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .join('&');
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Ici vous pouvez ajouter la logique d'envoi du formulaire
+    setStatus('sending');
+    try {
+      const body = encode({
+        'form-name': FORM_NAME,
+        ...formData
+      });
+      const res = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body
+      });
+      if (!res.ok) throw new Error('Erreur réseau');
+      setStatus('success');
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        organization: '',
+        reason: '',
+        message: '',
+        'bot-field': ''
+      });
+    } catch {
+      setStatus('error');
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -76,7 +108,34 @@ export function ContactForm() {
           </div>
 
           <div className="bg-white rounded-[32px] p-8 md:p-10 shadow-lg">
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form
+              name={FORM_NAME}
+              method="post"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              onSubmit={handleSubmit}
+              className="space-y-6"
+            >
+              <input type="hidden" name="form-name" value={FORM_NAME} />
+              <p className="hidden" aria-hidden="true">
+                <label>
+                  Ne pas remplir : <input name="bot-field" value={formData['bot-field']} onChange={handleChange} />
+                </label>
+              </p>
+
+              {status === 'success' && (
+                <div className="flex items-center gap-3 p-4 rounded-[16px] bg-green-50 text-green-800">
+                  <CheckCircle size={24} className="flex-shrink-0 text-green-600" />
+                  <p className="font-medium">Message envoyé. Nous vous recontacterons rapidement.</p>
+                </div>
+              )}
+              {status === 'error' && (
+                <div className="flex items-center gap-3 p-4 rounded-[16px] bg-red-50 text-red-800">
+                  <AlertCircle size={24} className="flex-shrink-0 text-red-600" />
+                  <p className="font-medium">Une erreur est survenue. Réessayez ou contactez-nous par email.</p>
+                </div>
+              )}
+
               <div>
                 <label htmlFor="name" className="block mb-2 text-gray-700 font-normal">Nom complet *</label>
                 <input
@@ -167,10 +226,11 @@ export function ContactForm() {
 
               <button
                 type="submit"
-                className="w-full px-10 py-4 bg-primary text-white rounded-[28px] hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group font-medium"
+                disabled={status === 'sending'}
+                className="w-full px-10 py-4 bg-primary text-white rounded-[28px] hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group font-medium disabled:opacity-70 disabled:cursor-not-allowed"
               >
-                Envoyer le message
-                <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                {status === 'sending' ? 'Envoi en cours...' : 'Envoyer le message'}
+                {status !== 'sending' && <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />}
               </button>
             </form>
           </div>
