@@ -3,7 +3,11 @@
   command = "npm run build"
   publish = "dist"
 
-# SPA : toutes les URLs renvoient vers index.html
+# SPA : racine et toutes les URLs renvoient vers index.html
+[[redirects]]
+  from = "/"
+  to = "/index.html"
+  status = 200
 [[redirects]]
   from = "/*"
   to = "/index.html"

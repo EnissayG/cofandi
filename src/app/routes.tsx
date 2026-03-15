@@ -1,4 +1,4 @@
-import { createBrowserRouter, Link } from 'react-router';
+import { createBrowserRouter, Link, Navigate } from 'react-router';
 import { Layout } from './components/Layout';
 import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
@@ -40,6 +40,7 @@ export const router = createBrowserRouter(
       errorElement: <RouteError />,
       children: [
         { index: true, Component: HomePage },
+        { path: '', element: <Navigate to="/" replace /> },
         { path: 'a-propos', Component: AboutPage },
         { path: 'machines', Component: MachinesPage },
         { path: 'emplacements', Component: LocationsPage },
