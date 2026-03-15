@@ -5,7 +5,7 @@ import { ScrollToTop } from './ScrollToTop';
 
 export function Layout() {
   return (
-    <div className="min-h-screen" style={{ fontFamily: 'Poppins, sans-serif' }}>
+    <div className="min-h-screen font-sans">
       <ScrollToTop />
       <Navigation />
       <main>

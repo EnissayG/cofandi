@@ -5,7 +5,7 @@ export function AboutPage() {
   return (
     <div className="pt-32 pb-20">
       {/* Hero Section */}
-      <section className="py-20 px-6 lg:px-12 bg-gradient-to-br from-[#2A3B8F] to-[#1f2d6b]">
+      <section className="py-20 px-6 lg:px-12 bg-gradient-to-br from-primary to-primary/90">
         <div className="max-w-[1200px] mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-6 py-3 mb-6">
             <Users size={20} className="text-white" />
@@ -37,10 +37,10 @@ export function AboutPage() {
         <div className="max-w-[1200px] mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="space-y-6">
-              <div className="inline-flex items-center gap-3 px-6 py-3 bg-[#2A3B8F]/10 rounded-full">
-                <Target size={24} className="text-[#2A3B8F]" />
+              <div className="inline-flex items-center gap-3 px-6 py-3 bg-primary/10 rounded-full">
+                <Target size={24} className="text-primary" />
                 <span 
-                  className="text-[#2A3B8F]"
+                  className="text-primary"
                   style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 500 }}
                 >
                   Notre Mission
@@ -51,7 +51,7 @@ export function AboutPage() {
                 style={{ 
                   fontFamily: 'Poppins, sans-serif', 
                   fontWeight: 600,
-                  color: '#2A3B8F'
+                  color: 'primary'
                 }}
               >
                 Rendre le café premium accessible à tous
@@ -73,12 +73,11 @@ export function AboutPage() {
             </div>
             <div className="bg-gray-50 rounded-[32px] p-12 space-y-8">
               <div className="space-y-4">
-                <div className="w-16 h-16 rounded-full bg-[#2A3B8F]/10 flex items-center justify-center">
-                  <Heart size={32} className="text-[#2A3B8F]" />
+                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Heart size={32} className="text-primary" />
                 </div>
                 <h3 
-                  className="text-xl"
-                  style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 500, color: '#2A3B8F' }}
+className="text-xl font-medium text-primary"
                 >
                   Passion pour la qualité
                 </h3>
@@ -90,12 +89,11 @@ export function AboutPage() {
                 </p>
               </div>
               <div className="space-y-4">
-                <div className="w-16 h-16 rounded-full bg-[#2A3B8F]/10 flex items-center justify-center">
-                  <Lightbulb size={32} className="text-[#2A3B8F]" />
+                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Lightbulb size={32} className="text-primary" />
                 </div>
                 <h3 
-                  className="text-xl"
-                  style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 500, color: '#2A3B8F' }}
+className="text-xl font-medium text-primary"
                 >
                   Innovation continue
                 </h3>
@@ -120,7 +118,7 @@ export function AboutPage() {
               style={{ 
                 fontFamily: 'Poppins, sans-serif', 
                 fontWeight: 600,
-                color: '#2A3B8F'
+                color: 'primary'
               }}
             >
               Nos Valeurs
@@ -150,8 +148,7 @@ export function AboutPage() {
             ].map((value, index) => (
               <div key={index} className="bg-white rounded-[28px] p-8 shadow-sm hover:shadow-lg transition-shadow">
                 <h3 
-                  className="text-2xl mb-4"
-                  style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600, color: '#2A3B8F' }}
+className="text-2xl mb-4 font-semibold text-primary"
                 >
                   {value.title}
                 </h3>
@@ -171,10 +168,10 @@ export function AboutPage() {
       <section className="py-24 px-6 lg:px-12 bg-white">
         <div className="max-w-[1200px] mx-auto">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-[#2A3B8F]/10 rounded-full mb-6">
-              <Users size={24} className="text-[#2A3B8F]" />
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-primary/10 rounded-full mb-6">
+              <Users size={24} className="text-primary" />
               <span 
-                className="text-[#2A3B8F]"
+                className="text-primary"
                 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 500 }}
               >
                 Notre Équipe
@@ -185,7 +182,7 @@ export function AboutPage() {
               style={{ 
                 fontFamily: 'Poppins, sans-serif', 
                 fontWeight: 600,
-                color: '#2A3B8F'
+                color: 'primary'
               }}
             >
               Une équipe passionnée et dévouée
@@ -199,7 +196,7 @@ export function AboutPage() {
             </p>
           </div>
 
-          <div className="bg-gradient-to-br from-[#2A3B8F] to-[#1f2d6b] rounded-[32px] p-12 md:p-16 text-center">
+          <div className="bg-gradient-to-br from-primary to-primary/90 rounded-[32px] p-12 md:p-16 text-center">
             <p 
               className="text-2xl md:text-3xl text-white mb-8"
               style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 300 }}

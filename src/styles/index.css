@@ -9,6 +9,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.font-sans {
+  font-family: 'Poppins', sans-serif;
+}
+
 * {
   scroll-behavior: smooth;
 }

@@ -1,14 +1,15 @@
 import { Coffee, CreditCard, Smartphone, Droplet, Zap, Shield } from 'lucide-react';
 import { Link } from 'react-router';
-import machineFullImage from 'figma:asset/377ff176bfe70b1e2f92e4692b49909aed25b084.png';
-import interfaceImage from 'figma:asset/5716e2c17b0aefb43be3a9ebe4449c2f9911eb66.png';
-import closeupImage from 'figma:asset/029e86b895224b44e971ed5dc7a466fbeb427a2e.png';
+
+const machineFullImage = '/machine-full.png';
+const interfaceImage = '/machine-interface.png';
+const closeupImage = '/machine-closeup.png';
 
 export function MachinesPage() {
   return (
     <div className="pt-32 pb-20">
       {/* Hero Section */}
-      <section className="py-20 px-6 lg:px-12 bg-gradient-to-br from-[#2A3B8F] to-[#1f2d6b]">
+      <section className="py-20 px-6 lg:px-12 bg-gradient-to-br from-primary to-primary/90">
         <div className="max-w-[1200px] mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-6 py-3 mb-6">
             <Coffee size={20} className="text-white" />
@@ -70,7 +71,7 @@ export function MachinesPage() {
               style={{ 
                 fontFamily: 'Poppins, sans-serif', 
                 fontWeight: 600,
-                color: '#2A3B8F'
+                color: 'primary'
               }}
             >
               Technologie et Innovation
@@ -94,7 +95,7 @@ export function MachinesPage() {
             style={{ 
               fontFamily: 'Poppins, sans-serif', 
               fontWeight: 600,
-              color: '#2A3B8F'
+              color: 'primary'
             }}
           >
             Caractéristiques Principales
@@ -134,12 +135,11 @@ export function MachinesPage() {
               }
             ].map((feature, index) => (
               <div key={index} className="bg-white rounded-[28px] p-8 shadow-sm hover:shadow-lg transition-shadow">
-                <div className="w-16 h-16 rounded-full bg-[#2A3B8F]/10 flex items-center justify-center mb-6">
-                  <feature.icon size={32} className="text-[#2A3B8F]" />
+                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+                  <feature.icon size={32} className="text-primary" />
                 </div>
                 <h3 
-                  className="text-xl mb-4"
-                  style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600, color: '#2A3B8F' }}
+className="text-xl mb-4 font-semibold text-primary"
                 >
                   {feature.title}
                 </h3>
@@ -164,7 +164,7 @@ export function MachinesPage() {
               style={{ 
                 fontFamily: 'Poppins, sans-serif', 
                 fontWeight: 600,
-                color: '#2A3B8F'
+                color: 'primary'
               }}
             >
               Large Sélection de Boissons
@@ -190,7 +190,7 @@ export function MachinesPage() {
             ].map((beverage, index) => (
               <div 
                 key={index} 
-                className="bg-gray-50 rounded-[20px] px-6 py-4 text-center hover:bg-[#2A3B8F]/10 transition-colors cursor-pointer"
+                className="bg-gray-50 rounded-[20px] px-6 py-4 text-center hover:bg-primary/10 transition-colors cursor-pointer"
               >
                 <p 
                   className="text-gray-700"
@@ -205,7 +205,7 @@ export function MachinesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-6 lg:px-12 bg-gradient-to-br from-[#2A3B8F] to-[#1f2d6b]">
+      <section className="py-24 px-6 lg:px-12 bg-gradient-to-br from-primary to-primary/90">
         <div className="max-w-[1200px] mx-auto text-center">
           <h2 
             className="text-3xl md:text-4xl mb-6 text-white"
@@ -225,7 +225,7 @@ export function MachinesPage() {
           </p>
           <Link 
             to="/contact"
-            className="inline-block px-12 py-4 bg-white text-[#2A3B8F] rounded-[28px] hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl"
+            className="inline-block px-12 py-4 bg-white text-primary rounded-[28px] hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl"
             style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 500 }}
           >
             Demander une démo

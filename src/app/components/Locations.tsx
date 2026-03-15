@@ -1,4 +1,5 @@
 import { MapPin } from 'lucide-react';
+import { Link } from 'react-router';
 
 const locations = [
   'J. Renaud Science Complex',
@@ -16,63 +17,42 @@ export function Locations() {
   return (
     <section id="emplacements" className="py-24 md:py-32 px-6 lg:px-12 bg-gray-50">
       <div className="max-w-[1440px] mx-auto">
-        {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
-          <div className="inline-flex items-center gap-2 bg-[#2A3B8F]/10 rounded-full px-6 py-3 mb-6">
-            <MapPin size={20} className="text-[#2A3B8F]" />
-            <span className="text-[#2A3B8F]" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 400 }}>
-              Présent sur le campus
-            </span>
+          <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-6 py-3 mb-6">
+            <MapPin size={20} className="text-primary" />
+            <span className="text-primary font-normal">Présent sur le campus</span>
           </div>
-          <h2 
-            className="text-3xl md:text-4xl lg:text-5xl mb-6"
-            style={{ 
-              fontFamily: 'Poppins, sans-serif', 
-              fontWeight: 600,
-              lineHeight: 1.2,
-              color: '#2A3B8F'
-            }}
-          >
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-primary mb-6 leading-tight">
             Trouvez-nous à l'Université Concordia
           </h2>
-          <p 
-            className="text-lg md:text-xl text-gray-600 leading-relaxed"
-            style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 300 }}
-          >
+          <p className="text-lg md:text-xl text-gray-600 font-light leading-relaxed">
             Nos machines sont stratégiquement placées dans plusieurs bâtiments pour votre commodité.
           </p>
         </div>
 
-        {/* Locations Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {locations.map((location, index) => (
-            <div 
+            <div
               key={index}
-              className="group bg-white border border-gray-200 rounded-[24px] p-6 hover:shadow-lg hover:border-[#2A3B8F]/30 transition-all duration-300"
+              className="group bg-white border border-gray-200 rounded-[24px] p-6 hover:shadow-lg hover:border-primary/30 transition-all duration-300"
             >
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-[#2A3B8F]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#2A3B8F]/20 transition-colors">
-                  <MapPin size={20} className="text-[#2A3B8F]" strokeWidth={2} />
+                <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
+                  <MapPin size={20} className="text-primary" strokeWidth={2} />
                 </div>
-                <p 
-                  className="text-gray-700 leading-relaxed pt-1"
-                  style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 400 }}
-                >
-                  {location}
-                </p>
+                <p className="text-gray-700 font-normal leading-relaxed pt-1">{location}</p>
               </div>
             </div>
           ))}
         </div>
 
-        {/* CTA */}
         <div className="text-center mt-12 md:mt-16">
-          <button 
-            className="px-10 py-4 bg-[#2A3B8F] text-white rounded-[28px] hover:bg-[#1f2d6b] transition-all duration-300 shadow-lg hover:shadow-xl"
-            style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 500 }}
+          <Link
+            to="/emplacements"
+            className="inline-block px-10 py-4 bg-primary text-white rounded-[28px] hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl font-medium"
           >
-            Voir toutes les emplacements
-          </button>
+            Voir tous les emplacements
+          </Link>
         </div>
       </div>
     </section>

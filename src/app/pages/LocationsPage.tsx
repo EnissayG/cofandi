@@ -75,7 +75,7 @@ export function LocationsPage() {
   return (
     <div className="pt-32 pb-20">
       {/* Hero Section */}
-      <section className="py-20 px-6 lg:px-12 bg-gradient-to-br from-[#2A3B8F] to-[#1f2d6b]">
+      <section className="py-20 px-6 lg:px-12 bg-gradient-to-br from-primary to-primary/90">
         <div className="max-w-[1200px] mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-6 py-3 mb-6">
             <MapPin size={20} className="text-white" />
@@ -108,8 +108,7 @@ export function LocationsPage() {
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div className="space-y-2">
               <p 
-                className="text-5xl md:text-6xl"
-                style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600, color: '#2A3B8F' }}
+                className="text-5xl md:text-6xl font-semibold text-primary"
               >
                 9
               </p>
@@ -122,8 +121,7 @@ export function LocationsPage() {
             </div>
             <div className="space-y-2">
               <p 
-                className="text-5xl md:text-6xl"
-                style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600, color: '#2A3B8F' }}
+                className="text-5xl md:text-6xl font-semibold text-primary"
               >
                 7h-23h
               </p>
@@ -136,8 +134,7 @@ export function LocationsPage() {
             </div>
             <div className="space-y-2">
               <p 
-                className="text-5xl md:text-6xl"
-                style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600, color: '#2A3B8F' }}
+                className="text-5xl md:text-6xl font-semibold text-primary"
               >
                 100%
               </p>
@@ -160,7 +157,7 @@ export function LocationsPage() {
             style={{ 
               fontFamily: 'Poppins, sans-serif', 
               fontWeight: 600,
-              color: '#2A3B8F'
+              color: 'primary'
             }}
           >
             Campus Concordia
@@ -184,19 +181,18 @@ export function LocationsPage() {
                   className="w-full p-6 text-left flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors"
                 >
                   <div className="flex items-center gap-4 flex-1">
-                    <div className="w-12 h-12 rounded-full bg-[#2A3B8F]/10 flex items-center justify-center flex-shrink-0">
-                      <MapPin size={24} className="text-[#2A3B8F]" />
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <MapPin size={24} className="text-primary" />
                     </div>
                     <h3 
-                      className="text-lg"
-                      style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600, color: '#2A3B8F' }}
+className="text-lg font-semibold text-primary"
                     >
                       {location.name}
                     </h3>
                   </div>
                   <ChevronDown 
                     size={24} 
-                    className={`text-[#2A3B8F] transition-transform duration-300 flex-shrink-0 ${
+                    className={`text-primary transition-transform duration-300 flex-shrink-0 ${
                       expandedIndex === index ? 'rotate-180' : ''
                     }`}
                   />
@@ -211,7 +207,7 @@ export function LocationsPage() {
                   <div className="px-6 pb-6 pt-2 space-y-4 border-t border-gray-100">
                     {/* Address */}
                     <div className="flex items-start gap-3">
-                      <MapPin size={18} className="text-[#2A3B8F] mt-1 flex-shrink-0" />
+                      <MapPin size={18} className="text-primary mt-1 flex-shrink-0" />
                       <div>
                         <p 
                           className="text-sm text-gray-500 mb-1"
@@ -236,7 +232,7 @@ export function LocationsPage() {
 
                     {/* Hours */}
                     <div className="flex items-start gap-3">
-                      <Clock size={18} className="text-[#2A3B8F] mt-1 flex-shrink-0" />
+                      <Clock size={18} className="text-primary mt-1 flex-shrink-0" />
                       <div>
                         <p 
                           className="text-sm text-gray-500 mb-1"
@@ -262,7 +258,7 @@ export function LocationsPage() {
           <div className="text-center">
             <button
               onClick={toggleExpandAll}
-              className="mt-8 inline-flex items-center gap-2 px-12 py-4 bg-[#2A3B8F] text-white rounded-[28px] hover:bg-[#1f2d6b] transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="mt-8 inline-flex items-center gap-2 px-12 py-4 bg-[primary] text-white rounded-[28px] hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl"
               style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 500 }}
             >
               {expandAll ? <Minimize2 size={20} /> : <Maximize2 size={20} />}
@@ -273,7 +269,7 @@ export function LocationsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-6 lg:px-12 bg-gradient-to-br from-[#2A3B8F] to-[#1f2d6b]">
+      <section className="py-24 px-6 lg:px-12 bg-gradient-to-br from-primary to-primary/90">
         <div className="max-w-[1200px] mx-auto text-center">
           <h2 
             className="text-3xl md:text-4xl mb-6 text-white"
@@ -292,7 +288,7 @@ export function LocationsPage() {
           </p>
           <Link 
             to="/contact"
-            className="inline-block px-12 py-4 bg-white text-[#2A3B8F] rounded-[28px] hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl"
+            className="inline-block px-12 py-4 bg-white text-primary rounded-[28px] hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl"
             style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 500 }}
           >
             Nous contacter
