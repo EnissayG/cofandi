@@ -1,8 +1,9 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router';
+import { asset } from '../utils/asset';
 
-const logo = '/logo.png';
+const logo = asset('logo.png');
 
 export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

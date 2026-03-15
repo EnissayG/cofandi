@@ -1,8 +1,9 @@
 import { Link } from 'react-router';
+import { asset } from '../utils/asset';
 
-const machineFullImage = '/machine-full.png';
-const interfaceImage = '/machine-interface.png';
-const closeupImage = '/machine-closeup.png';
+const machineFullImage = asset('machine-full.png');
+const interfaceImage = asset('machine-interface.png');
+const closeupImage = asset('machine-closeup.png');
 
 export function MachineShowcase() {
   return (

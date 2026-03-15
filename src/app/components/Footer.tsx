@@ -1,7 +1,8 @@
 import { Instagram, Linkedin, Mail } from 'lucide-react';
 import { Link } from 'react-router';
+import { asset } from '../utils/asset';
 
-const logo = '/logo.png';
+const logo = asset('logo.png');
 
 export function Footer() {
   const currentYear = new Date().getFullYear();

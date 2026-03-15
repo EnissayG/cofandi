@@ -1,8 +1,9 @@
 import { ArrowRight, MapPin } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useState, useEffect } from 'react';
+import { asset } from '../utils/asset';
 
-const heroImages = ['/hero-cup1.png', '/hero-cup2.png'];
+const heroImages = [asset('hero-cup1.png'), asset('hero-cup2.png')];
 
 export function Hero() {
   const [currentCup, setCurrentCup] = useState(0);
