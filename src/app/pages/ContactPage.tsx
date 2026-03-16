@@ -1,5 +1,6 @@
 import { ContactForm } from '../components/ContactForm';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import { SectionWave } from '../components/SectionWave';
 
 export function ContactPage() {
   return (
@@ -31,6 +32,8 @@ export function ContactPage() {
         </div>
       </section>
 
+      <SectionWave className="text-white" />
+
       <section className="py-16 px-6 lg:px-12 bg-white">
         <div className="max-w-[1200px] mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
@@ -44,10 +47,10 @@ export function ContactPage() {
                 Email
               </h3>
               <a 
-                href="mailto:info@confandi.com"
+                href="mailto:info@cofandi.com"
 className="text-gray-600 hover:text-primary transition-colors font-normal"
               >
-                info@confandi.com
+                info@cofandi.com
               </a>
             </div>
 

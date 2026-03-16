@@ -1,6 +1,7 @@
 import { MapPin, Clock, Navigation, ChevronDown, Maximize2, Minimize2 } from 'lucide-react';
 import { Link } from 'react-router';
 import { useState } from 'react';
+import { SectionWave } from '../components/SectionWave';
 
 export function LocationsPage() {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
@@ -96,10 +97,12 @@ export function LocationsPage() {
             className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto"
             style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 300 }}
           >
-            Machines Confandi disponibles dans 9 bâtiments de l'Université Concordia
+            Machines Cofandi disponibles dans 9 bâtiments de l'Université Concordia
           </p>
         </div>
       </section>
+
+      <SectionWave className="text-white" />
 
       <section className="py-16 px-6 lg:px-12 bg-white">
         <div className="max-w-[1200px] mx-auto">

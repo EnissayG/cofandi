@@ -32,7 +32,7 @@ export function UseCases() {
             Pour tous les environnements
           </h2>
           <p className="text-lg md:text-xl text-gray-600 font-light leading-relaxed">
-            Confandi s'adapte parfaitement aux besoins de différents types d'établissements.
+            Cofandi s'adapte parfaitement aux besoins de différents types d'établissements.
           </p>
         </div>
 

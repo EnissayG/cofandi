@@ -20,15 +20,15 @@ export function Footer() {
       <div className="max-w-[1440px] mx-auto">
         <div className="grid md:grid-cols-4 gap-12 md:gap-8 mb-12">
           <div className="md:col-span-1 space-y-6">
-            <img src={logo} alt="Confandi" className="h-10 w-auto" />
+            <img src={logo} alt="Cofandi" className="h-10 w-auto" />
             <p className="text-white/80 font-light leading-relaxed">
               L'expérience café premium en libre-service sur le campus Concordia.
             </p>
             <div className="flex gap-3">
-              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white hover:text-primary transition-all duration-300" aria-label="Instagram">
+              <a href="https://www.instagram.com/cofandiservice/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white hover:text-primary transition-all duration-300" aria-label="Instagram">
                 <Instagram size={18} />
               </a>
-              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white hover:text-primary transition-all duration-300" aria-label="LinkedIn">
+              <a href="https://fr.linkedin.com/posts/yann-kedja-91506227a_les-machines-distributrices-cofandi-pour-activity-7388455950883536896-FtlY" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white hover:text-primary transition-all duration-300" aria-label="LinkedIn">
                 <Linkedin size={18} />
               </a>
             </div>
@@ -64,9 +64,9 @@ export function Footer() {
             <h4 className="mb-6 font-medium">Contact</h4>
             <ul className="space-y-4 font-light">
               <li>
-                <a href="mailto:info@confandi.com" className="flex items-center gap-3 text-white/80 hover:text-white transition-colors">
+                <a href="mailto:info@Cofandi.com" className="flex items-center gap-3 text-white/80 hover:text-white transition-colors">
                   <Mail size={16} className="text-white" />
-                  info@confandi.com
+                  info@Cofandi.com
                 </a>
               </li>
               <li className="text-white/80">
@@ -78,7 +78,7 @@ export function Footer() {
 
         <div className="pt-8 border-t border-white/20">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-white/60 text-sm font-light">© {currentYear} Confandi. Tous droits réservés.</p>
+            <p className="text-white/60 text-sm font-light">© {currentYear} Cofandi. Tous droits réservés.</p>
             <div className="flex gap-6">
               <a href="#" className="text-white/60 text-sm hover:text-white transition-colors font-light">Politique de confidentialité</a>
               <a href="#" className="text-white/60 text-sm hover:text-white transition-colors font-light">Conditions d'utilisation</a>

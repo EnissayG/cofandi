@@ -83,7 +83,7 @@ export function Hero() {
                 >
                   <img 
                     src={cups[currentCup]}
-                    alt={currentCup === 0 ? "Café Confandi avec latte art" : "Tasse Confandi fermée"}
+                    alt={currentCup === 0 ? "Café Cofandi avec latte art" : "Tasse Cofandi fermée"}
                     className="w-full h-full object-contain drop-shadow-2xl"
                     fetchPriority="high"
                   />

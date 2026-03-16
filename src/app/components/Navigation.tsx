@@ -28,7 +28,7 @@ export function Navigation() {
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 py-5">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center">
-            <img src={logo} alt="Confandi" className="h-10 md:h-12 w-auto" fetchPriority="high" />
+            <img src={logo} alt="Cofandi" className="h-10 md:h-12 w-auto" fetchPriority="high" />
           </Link>
 
           <div className="hidden md:flex items-center gap-10">

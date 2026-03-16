@@ -1,5 +1,6 @@
 import { Target, Heart, Lightbulb, Users, Award, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router';
+import { SectionWave } from '../components/SectionWave';
 
 export function AboutPage() {
   return (
@@ -9,7 +10,7 @@ export function AboutPage() {
           <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-6 py-3 mb-6">
             <Users size={20} className="text-white" />
             <span className="text-white" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 400 }}>
-              À propos de Confandi
+              À propos de Cofandi
             </span>
           </div>
           <h1 
@@ -30,6 +31,8 @@ export function AboutPage() {
           </p>
         </div>
       </section>
+
+      <SectionWave className="text-white" />
 
       <section className="py-24 px-6 lg:px-12 bg-white">
         <div className="max-w-[1200px] mx-auto">
@@ -58,7 +61,7 @@ export function AboutPage() {
                 className="text-lg text-gray-600 leading-relaxed"
                 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 300 }}
               >
-                Chez Confandi, nous croyons que chacun mérite d'avoir accès à des boissons de qualité exceptionnelle, 
+                Chez Cofandi, nous croyons que chacun mérite d'avoir accès à des boissons de qualité exceptionnelle, 
                 peu importe où il se trouve. Notre mission est de transformer les espaces communs en destinations café haut de gamme.
               </p>
               <p 
@@ -197,14 +200,14 @@ className="text-2xl mb-4 font-semibold text-primary"
               className="text-2xl md:text-3xl text-white mb-8"
               style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 300 }}
             >
-              "Notre équipe travaille sans relâche pour garantir que chaque interaction avec Confandi 
+              "Notre équipe travaille sans relâche pour garantir que chaque interaction avec Cofandi 
               soit mémorable et exceptionnelle."
             </p>
             <p 
               className="text-xl text-white/80"
               style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 400 }}
             >
-              L'équipe Confandi
+              L'équipe Cofandi
             </p>
           </div>
         </div>

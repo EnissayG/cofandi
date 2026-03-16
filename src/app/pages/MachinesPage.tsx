@@ -1,6 +1,7 @@
 import { Coffee, CreditCard, Smartphone, Droplet, Zap, Shield } from 'lucide-react';
 import { Link } from 'react-router';
 import { asset } from '../utils/asset';
+import { SectionWave } from '../components/SectionWave';
 
 const machineFullImage = asset('machine-full.png');
 const interfaceImage = asset('machine-interface.png');
@@ -36,13 +37,15 @@ export function MachinesPage() {
         </div>
       </section>
 
+      <SectionWave className="text-white" />
+
       <section className="py-24 px-6 lg:px-12 bg-white">
         <div className="max-w-[1200px] mx-auto">
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             <div className="md:col-span-2 rounded-[32px] overflow-hidden shadow-xl">
               <img
                 src={machineFullImage}
-                alt="Machine Confandi - vue complète"
+                alt="Machine Cofandi - vue complète"
                 className="w-full h-[500px] object-cover"
                 loading="lazy"
               />
@@ -51,7 +54,7 @@ export function MachinesPage() {
               <div className="rounded-[28px] overflow-hidden shadow-lg">
                 <img
                   src={interfaceImage}
-                  alt="Détail de l'interface Confandi"
+                  alt="Détail de l'interface Cofandi"
                   className="w-full h-[240px] object-cover"
                   loading="lazy"
                 />
@@ -59,7 +62,7 @@ export function MachinesPage() {
               <div className="rounded-[28px] overflow-hidden shadow-lg">
                 <img
                   src={closeupImage}
-                  alt="Café premium Confandi"
+                  alt="Café premium Cofandi"
                   className="w-full h-[240px] object-cover"
                   loading="lazy"
                 />
@@ -82,7 +85,7 @@ export function MachinesPage() {
               className="text-xl text-gray-600 text-center max-w-3xl mx-auto"
               style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 300 }}
             >
-              Chaque machine Confandi est équipée des dernières technologies pour garantir 
+              Chaque machine Cofandi est équipée des dernières technologies pour garantir 
               qualité, rapidité et facilité d'utilisation.
             </p>
           </div>
@@ -220,7 +223,7 @@ className="text-xl mb-4 font-semibold text-primary"
             style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 300 }}
           >
             Contactez-nous pour une démonstration ou pour discuter de l'installation 
-            d'une machine Confandi dans votre établissement.
+            d'une machine Cofandi dans votre établissement.
           </p>
           <Link 
             to="/contact"
