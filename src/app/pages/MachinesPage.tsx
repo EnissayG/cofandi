@@ -9,7 +9,6 @@ const closeupImage = asset('machine-closeup.png');
 export function MachinesPage() {
   return (
     <div className="pt-32 pb-20">
-      {/* Hero Section */}
       <section className="py-20 px-6 lg:px-12 bg-gradient-to-br from-primary to-primary/90">
         <div className="max-w-[1200px] mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-6 py-3 mb-6">
@@ -37,7 +36,6 @@ export function MachinesPage() {
         </div>
       </section>
 
-      {/* Machine Gallery */}
       <section className="py-24 px-6 lg:px-12 bg-white">
         <div className="max-w-[1200px] mx-auto">
           <div className="grid md:grid-cols-3 gap-8 mb-16">
@@ -91,7 +89,6 @@ export function MachinesPage() {
         </div>
       </section>
 
-      {/* Features Section */}
       <section className="py-24 px-6 lg:px-12 bg-gray-50">
         <div className="max-w-[1200px] mx-auto">
           <h2 
@@ -159,7 +156,6 @@ className="text-xl mb-4 font-semibold text-primary"
         </div>
       </section>
 
-      {/* Beverage Options */}
       <section className="py-24 px-6 lg:px-12 bg-white">
         <div className="max-w-[1200px] mx-auto">
           <div className="text-center mb-16">
@@ -208,7 +204,6 @@ className="text-xl mb-4 font-semibold text-primary"
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-24 px-6 lg:px-12 bg-gradient-to-br from-primary to-primary/90">
         <div className="max-w-[1200px] mx-auto text-center">
           <h2 

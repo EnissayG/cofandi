@@ -74,7 +74,6 @@ export function LocationsPage() {
 
   return (
     <div className="pt-32 pb-20">
-      {/* Hero Section */}
       <section className="py-20 px-6 lg:px-12 bg-gradient-to-br from-primary to-primary/90">
         <div className="max-w-[1200px] mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-6 py-3 mb-6">
@@ -102,7 +101,6 @@ export function LocationsPage() {
         </div>
       </section>
 
-      {/* Stats Section */}
       <section className="py-16 px-6 lg:px-12 bg-white">
         <div className="max-w-[1200px] mx-auto">
           <div className="grid md:grid-cols-3 gap-8 text-center">
@@ -149,7 +147,6 @@ export function LocationsPage() {
         </div>
       </section>
 
-      {/* Locations Grid with Accordion */}
       <section className="py-24 px-6 lg:px-12 bg-gray-50">
         <div className="max-w-[1200px] mx-auto">
           <h2 className="text-3xl md:text-4xl text-center mb-4 font-semibold text-primary">
@@ -168,7 +165,6 @@ export function LocationsPage() {
                 key={index}
                 className="bg-white rounded-[20px] overflow-hidden shadow-md hover:shadow-lg transition-all"
               >
-                {/* Card Header - Always Visible */}
                 <button
                   onClick={() => toggleExpand(index)}
                   className="w-full p-6 text-left flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors"
@@ -191,14 +187,12 @@ className="text-lg font-semibold text-primary"
                   />
                 </button>
 
-                {/* Expanded Details */}
                 <div 
                   className={`overflow-hidden transition-all duration-300 ${
                     expandedIndex === index || expandAll ? 'max-h-96' : 'max-h-0'
                   }`}
                 >
                   <div className="px-6 pb-6 pt-2 space-y-4 border-t border-gray-100">
-                    {/* Address */}
                     <div className="flex items-start gap-3">
                       <MapPin size={18} className="text-primary mt-1 flex-shrink-0" />
                       <div>
@@ -223,7 +217,6 @@ className="text-lg font-semibold text-primary"
                       </div>
                     </div>
 
-                    {/* Hours */}
                     <div className="flex items-start gap-3">
                       <Clock size={18} className="text-primary mt-1 flex-shrink-0" />
                       <div>
@@ -260,7 +253,6 @@ className="text-lg font-semibold text-primary"
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-24 px-6 lg:px-12 bg-gradient-to-br from-primary to-primary/90">
         <div className="max-w-[1200px] mx-auto text-center">
           <h2 

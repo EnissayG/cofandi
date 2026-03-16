@@ -4,7 +4,6 @@ import { Mail, Phone, MapPin } from 'lucide-react';
 export function ContactPage() {
   return (
     <div className="pt-32 pb-20">
-      {/* Hero Section */}
       <section className="py-20 px-6 lg:px-12 bg-gradient-to-br from-primary to-primary/90">
         <div className="max-w-[1200px] mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-6 py-3 mb-6">
@@ -32,7 +31,6 @@ export function ContactPage() {
         </div>
       </section>
 
-      {/* Contact Info Section */}
       <section className="py-16 px-6 lg:px-12 bg-white">
         <div className="max-w-[1200px] mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
@@ -88,7 +86,6 @@ className="text-gray-600 font-normal"
         </div>
       </section>
 
-      {/* Contact Form */}
       <ContactForm />
     </div>
   );

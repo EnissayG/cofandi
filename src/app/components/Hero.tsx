@@ -12,7 +12,7 @@ export function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentCup((prev) => (prev + 1) % cups.length);
-    }, 5000); // Ralenti à 5 secondes
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);

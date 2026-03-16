@@ -119,7 +119,7 @@ export function ContactForm() {
               <input type="hidden" name="form-name" value={FORM_NAME} />
               <p className="hidden" aria-hidden="true">
                 <label>
-                  Ne pas remplir : <input name="bot-field" value={formData['bot-field']} onChange={handleChange} />
+                  <input name="bot-field" value={formData['bot-field']} onChange={handleChange} readOnly tabIndex={-1} />
                 </label>
               </p>
 
