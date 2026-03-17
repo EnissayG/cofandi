@@ -1,5 +1,5 @@
 import { Hero } from '../components/Hero';
-import { WhyConfandi } from '../components/WhyConfandi';
+import { WhyCofandi } from '../components/WhyConfandi';
 import { HowItWorks } from '../components/HowItWorks';
 import { MachineShowcase } from '../components/MachineShowcase';
 import { Locations } from '../components/Locations';
@@ -11,7 +11,7 @@ export function HomePage() {
     <>
       <Hero />
       <SectionWave className="text-gray-50" />
-      <WhyConfandi />
+      <WhyCofandi />
       <HowItWorks />
       <MachineShowcase />
       <Locations />

@@ -77,8 +77,8 @@ export function ContactForm() {
                 </div>
                 <div>
                   <h3 className="mb-2 font-medium text-primary">Email</h3>
-                  <a href="mailto:info@confandi.com" className="text-gray-600 hover:text-primary transition-colors font-light">
-                    info@confandi.com
+                  <a href="mailto:info@cofandi.com" className="text-gray-600 hover:text-primary transition-colors font-light">
+                    info@cofandi.com
                   </a>
                 </div>
               </div>

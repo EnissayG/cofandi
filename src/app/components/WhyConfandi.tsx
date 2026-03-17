@@ -23,7 +23,7 @@ const features = [
   }
 ];
 
-export function WhyConfandi() {
+export function WhyCofandi() {
   return (
     <section id="pourquoi" className="py-24 md:py-32 px-6 lg:px-12 bg-gray-50">
       <div className="max-w-[1440px] mx-auto">

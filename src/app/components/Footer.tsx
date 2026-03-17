@@ -22,7 +22,7 @@ export function Footer() {
           <div className="md:col-span-1 space-y-6">
             <img src={logo} alt="Cofandi" className="h-10 w-auto" />
             <p className="text-white/80 font-light leading-relaxed">
-              L'expérience café premium en libre-service sur le campus Concordia.
+              L'expérience café premium en libre-service .
             </p>
             <div className="flex gap-3">
               <a href="https://www.instagram.com/cofandiservice/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white hover:text-primary transition-all duration-300" aria-label="Instagram">
