@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "postinstall": "npm rebuild @tailwindcss/oxide --build-from-source || npm rebuild --build-from-source"
   },
   "dependencies": {
     "@emotion/react": "11.14.0",
@@ -76,5 +77,8 @@
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "*",
     "lightningcss-linux-x64-gnu": "*"
+  },
+  "engines": {
+    "node": "20.x"
   }
 }
