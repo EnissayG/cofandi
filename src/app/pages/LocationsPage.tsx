@@ -61,6 +61,12 @@ export function LocationsPage() {
       address: '1395 Boulevard René-Lévesque O',
       hours: 'Lun-Ven: 8h - 21h | Sam-Dim: 10h - 18h',
       floor: 'Rez-de-chaussée, près des studios'
+    },
+    {
+      name: 'Hall West Building',
+      address: '1400 Boulevard de Maisonneuve O',
+      hours: 'Lun-Ven: 7h - 22h | Sam-Dim: 9h - 20h',
+      floor: 'À proximité de l’entrée principale'
     }
   ];
 
@@ -91,13 +97,13 @@ export function LocationsPage() {
               lineHeight: 1.2
             }}
           >
-            Trouvez-nous sur le Campus
+            Emplacements à venir
           </h1>
           <p 
             className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto"
             style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 300 }}
           >
-            Machines Cofandi disponibles dans 9 bâtiments de l'Université Concordia
+            Machines Cofandi disponibles dans 10 bâtiments. De nouveaux emplacements de machines seront bientôt ajoutés.
           </p>
         </div>
       </section>
@@ -106,12 +112,12 @@ export function LocationsPage() {
 
       <section className="py-16 px-6 lg:px-12 bg-white">
         <div className="max-w-[1200px] mx-auto">
-          <div className="grid md:grid-cols-3 gap-8 text-center">
+          <div className="grid md:grid-cols-2 gap-8 text-center">
             <div className="space-y-2">
               <p 
                 className="text-5xl md:text-6xl font-semibold text-primary"
               >
-                9
+                10
               </p>
               <p 
                 className="text-xl text-gray-600"
@@ -131,19 +137,6 @@ export function LocationsPage() {
                 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 400 }}
               >
                 Horaires étendus
-              </p>
-            </div>
-            <div className="space-y-2">
-              <p 
-                className="text-5xl md:text-6xl font-semibold text-primary"
-              >
-                100%
-              </p>
-              <p 
-                className="text-xl text-gray-600"
-                style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 400 }}
-              >
-                Satisfaction étudiante
               </p>
             </div>
           </div>
@@ -253,6 +246,13 @@ className="text-lg font-semibold text-primary"
               {expandAll ? 'Réduire tout' : 'Développer tout'}
             </button>
           </div>
+
+          <p
+            className="text-center text-gray-600 mt-8"
+            style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 300 }}
+          >
+            De nouveaux emplacements de machines seront bientôt ajoutés. Merci de votre patience.
+          </p>
         </div>
       </section>
 

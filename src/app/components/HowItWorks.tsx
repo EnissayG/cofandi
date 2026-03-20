@@ -34,6 +34,22 @@ export function HowItWorks() {
           </p>
         </div>
 
+        <div className="max-w-5xl mx-auto mb-16 md:mb-20">
+          <div className="rounded-[28px] overflow-hidden shadow-sm bg-gray-50">
+            <div className="relative w-full" style={{ paddingTop: '56.25%' }}>
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src="https://www.youtube-nocookie.com/embed/sJCQqvdKVTk?rel=0&modestbranding=1"
+                title="Comment acheter un café (vidéo étudiant)"
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
+
         <div className="grid md:grid-cols-3 gap-8 md:gap-12">
           {steps.map((step, index) => (
             <div key={index} className="relative">

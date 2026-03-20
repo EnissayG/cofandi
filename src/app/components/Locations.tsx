@@ -10,7 +10,8 @@ const locations = [
   'Visual Art Building',
   'Faubourg Building',
   'Henry F. Hall Building',
-  'John Molson Building'
+  'John Molson Building',
+  'Hall West Building'
 ];
 
 export function Locations() {
@@ -23,10 +24,10 @@ export function Locations() {
             <span className="text-primary font-normal">Présent sur le campus</span>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-primary mb-6 leading-tight">
-            Trouvez-nous à l'Université Concordia
+            D'autres emplacements à venir
           </h2>
           <p className="text-lg md:text-xl text-gray-600 font-light leading-relaxed">
-            Nos machines sont stratégiquement placées dans plusieurs bâtiments pour votre commodité.
+            De nouveaux emplacements de machines seront bientôt ajoutés pour encore plus de commodité.
           </p>
         </div>
 

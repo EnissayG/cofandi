@@ -23,3 +23,21 @@
      border-top-right-radius: 2rem;
    }
  }
+
+@keyframes floatBag {
+  0% {
+    transform: translateY(0px) rotate(-1deg);
+  }
+  50% {
+    transform: translateY(-14px) rotate(1deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(-1deg);
+  }
+}
+
+/* Animation specific to the Fairtrade coffee bag */
+.fairtrade-coffee-bag {
+  animation: floatBag 5s ease-in-out infinite;
+  will-change: transform, opacity;
+}

@@ -1,4 +1,4 @@
-import { Sparkles, Clock, Shield, Coffee } from 'lucide-react';
+import { Sparkles, Clock, Shield, Coffee, BadgeCheck } from 'lucide-react';
 
 const features = [
   {
@@ -15,6 +15,11 @@ const features = [
     icon: Shield,
     title: 'Fiabilité garantie',
     description: 'Un service disponible 24/7 avec un entretien régulier et un support technique réactif.'
+  },
+  {
+    icon: BadgeCheck,
+    title: 'Fairtrade',
+    description: 'Un café issu du commerce équitable, pour un impact positif tout au long de la chaîne d’approvisionnement.'
   },
   {
     icon: Coffee,
@@ -36,11 +41,11 @@ export function WhyCofandi() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8 items-stretch">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group p-8 rounded-[28px] bg-white border border-gray-100 hover:border-primary/20 hover:shadow-xl transition-all duration-300"
+              className="group p-6 md:p-8 rounded-[28px] bg-white border border-gray-100 hover:border-primary/20 hover:shadow-xl transition-all duration-300 flex flex-col h-full"
             >
               <div className="mb-6">
                 <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
@@ -48,7 +53,7 @@ export function WhyCofandi() {
                 </div>
               </div>
               <h3 className="text-xl font-medium text-primary mb-4">{feature.title}</h3>
-              <p className="text-gray-600 font-light leading-relaxed">{feature.description}</p>
+              <p className="text-gray-600 font-light leading-relaxed mt-auto">{feature.description}</p>
             </div>
           ))}
         </div>

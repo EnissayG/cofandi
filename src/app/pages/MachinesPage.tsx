@@ -1,13 +1,58 @@
-import { Coffee, CreditCard, Smartphone, Droplet, Zap, Shield } from 'lucide-react';
+import { Coffee, CreditCard, Smartphone, Droplet, Zap, Shield, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router';
 import { asset } from '../utils/asset';
 import { SectionWave } from '../components/SectionWave';
+import React, { useState } from 'react';
 
 const machineFullImage = asset('machine-full.png');
 const interfaceImage = asset('machine-interface.png');
 const closeupImage = asset('machine-closeup.png');
 
 export function MachinesPage() {
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+
+  const faq = [
+    {
+      q: "1. Combien coûte l'installation d'une machine Cofandi ?",
+      a: "L'installation, l'entretien et le réapprovisionnement sont entièrement pris en charge par Cofandi. Quelques conditions peuvent s'appliquer."
+    },
+    {
+      q: '2. Quelles boissons sont disponibles ?',
+      bullets: [
+        'Espresso simple & double',
+        'Café allongé',
+        'Latte, cappuccino, mocha',
+        'Vanille française',
+        'Matcha et chai (sur machines compatibles)',
+        'Options chaudes et froides selon le modèle'
+      ]
+    },
+    {
+      q: "3. Qui s'occupe de l'entretien ?",
+      a: "Nous assurons l'entretien régulier, le nettoyage et la maintenance."
+    },
+    {
+      q: "4. Que faire en cas de panne ?",
+      a: "Un numéro d'assistance est affiché sur la machine. Notre équipe intervient rapidement pour toute défaillance technique ou réclamation."
+    },
+    {
+      q: '5. Quels types de paiements sont acceptés ?',
+      a: "Les machines acceptent les paiements sans contact (carte bancaire, téléphone, smartwatch), via le système sécurisé Nayax."
+    },
+    {
+      q: '6. Peut-on générer des revenus avec la machine ?',
+      a: "Oui. Selon l'entente, un partage des revenus peut être offert à l'établissement en fonction des ventes réalisées."
+    },
+    {
+      q: "7. Peut-on personnaliser la machine ?",
+      a: "Absolument. Il est possible d’y afficher votre logo ou d’utiliser l’écran pour des annonces internes, événements ou promotions."
+    },
+    {
+      q: '9. Quel est l’espace requis pour installer une machine ?',
+      a: "Nos machines nécessitent une prise électrique standard (120V) et, selon le modèle, un accès à une source d’eau. L’installation est rapide (moins d’une journée). Certaines conditions s’appliquent."
+    }
+  ] as const;
+
   return (
     <div className="pt-32 pb-20">
       <section className="py-20 px-6 lg:px-12 bg-gradient-to-br from-primary to-primary/90">
@@ -232,6 +277,66 @@ className="text-xl mb-4 font-semibold text-primary"
           >
             Demander une démo
           </Link>
+        </div>
+      </section>
+
+      <section className="py-24 px-6 lg:px-12 bg-white">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="text-center mb-16">
+            <h2
+              className="text-3xl md:text-4xl mb-6 font-semibold text-primary"
+              style={{ fontFamily: 'Poppins, sans-serif' }}
+            >
+              FAQ Machines Cofandi
+            </h2>
+            <p
+              className="text-xl text-gray-600 max-w-2xl mx-auto"
+              style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 300 }}
+            >
+              Les réponses aux questions les plus fréquentes sur l’installation, l’utilisation et le service.
+            </p>
+          </div>
+
+          <div className="max-w-3xl mx-auto space-y-4">
+            {faq.map((item, index) => {
+              const open = openFaqIndex === index;
+              return (
+                <div key={item.q} className="rounded-[28px] border border-gray-100 bg-gray-50 overflow-hidden">
+                  <button
+                    type="button"
+                    className="w-full px-6 py-5 flex items-center justify-between gap-4 text-left"
+                    onClick={() => setOpenFaqIndex(open ? null : index)}
+                  >
+                    <span className="text-primary font-medium">{item.q}</span>
+                    <ChevronDown
+                      size={22}
+                      className={`text-primary transition-transform ${open ? 'rotate-180' : ''}`}
+                    />
+                  </button>
+
+                  <div
+                    className={`px-6 overflow-hidden transition-all duration-300 ${
+                      open
+                        ? 'max-h-[320px] pb-5 opacity-100'
+                        : 'max-h-0 pb-0 opacity-0'
+                    }`}
+                  >
+                    {('bullets' in item && item.bullets) ? (
+                      <ul className="list-disc pl-6 text-gray-600 font-light leading-relaxed space-y-2">
+                        {item.bullets.map((b) => (
+                          <li key={b}>{b}</li>
+                        ))}
+                      </ul>
+                    ) : (
+                      'a' in item ? (
+                        <p className="text-gray-600 font-light leading-relaxed">{item.a}</p>
+                      ) : null
+                    )}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </section>
     </div>
