@@ -46,11 +46,11 @@ export function ContactPage() {
               >
                 Email
               </h3>
-              <a 
-                href="mailto:info@cofandi.com"
-className="text-gray-600 hover:text-primary transition-colors font-normal"
+              <a
+                href="mailto:cofandi.inc.ca@gmail.com"
+                className="text-gray-600 hover:text-primary transition-colors font-normal"
               >
-                info@cofandi.com
+                cofandi.inc.ca@gmail.com
               </a>
             </div>
 
@@ -63,11 +63,12 @@ className="text-gray-600 hover:text-primary transition-colors font-normal"
               >
                 Téléphone
               </h3>
-              <p 
-className="text-gray-600 font-normal"
+              <a
+                href="tel:+15145604627"
+                className="text-gray-600 hover:text-primary transition-colors font-normal"
               >
-                +1 (514) 555-CAFE
-              </p>
+                (514) 560-4627
+              </a>
             </div>
 
             <div className="text-center space-y-4 p-6">

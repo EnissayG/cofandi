@@ -77,8 +77,8 @@ export function ContactForm() {
                 </div>
                 <div>
                   <h3 className="mb-2 font-medium text-primary">Email</h3>
-                  <a href="mailto:info@cofandi.com" className="text-gray-600 hover:text-primary transition-colors font-light">
-                    info@cofandi.com
+                  <a href="mailto:cofandi.inc.ca@gmail.com" className="text-gray-600 hover:text-primary transition-colors font-light">
+                    cofandi.inc.ca@gmail.com
                   </a>
                 </div>
               </div>
@@ -89,8 +89,8 @@ export function ContactForm() {
                 </div>
                 <div>
                   <h3 className="mb-2 font-medium text-primary">Téléphone</h3>
-                  <a href="tel:+15141234567" className="text-gray-600 hover:text-primary transition-colors font-light">
-                    +1 (514) 123-4567
+                  <a href="tel:+15145604627" className="text-gray-600 hover:text-primary transition-colors font-light">
+                    (514) 560-4627
                   </a>
                 </div>
               </div>

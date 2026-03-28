@@ -1,23 +1,26 @@
-import { Smartphone, CreditCard, Coffee } from 'lucide-react';
+import { Smartphone, SlidersHorizontal, CreditCard } from 'lucide-react';
 
 const steps = [
   {
     icon: Smartphone,
     step: '01',
     title: 'Sélectionnez votre boisson',
-    description: 'Parcourez notre menu sur l\'écran tactile et choisissez parmi notre sélection de boissons premium.'
+    description:
+      "Parcourez le menu sur l'écran tactile et choisissez la boisson qui vous fait envie parmi notre sélection."
+  },
+  {
+    icon: SlidersHorizontal,
+    step: '02',
+    title: 'Personnalisez votre boisson',
+    description:
+      'Ajustez les options à votre goût : intensité, teneur en sucre, type de lait ou autres réglages selon la boisson choisie.'
   },
   {
     icon: CreditCard,
-    step: '02',
-    title: 'Effectuez le paiement',
-    description: 'Payez facilement par carte ou sans contact. Rapide, sécurisé et sans tracas.'
-  },
-  {
-    icon: Coffee,
     step: '03',
-    title: 'Savourez votre boisson',
-    description: 'Récupérez votre boisson fraîchement préparée et profitez d\'un moment de qualité.'
+    title: 'Effectuez le paiement',
+    description:
+      'Payez par carte ou sans contact. Rapide, sécurisé, puis la machine prépare votre boisson.'
   }
 ];
 

@@ -1,4 +1,4 @@
-import { Instagram, Linkedin, Mail } from 'lucide-react';
+import { Instagram, Linkedin, Mail, Phone } from 'lucide-react';
 import { Link } from 'react-router';
 import { asset } from '../utils/asset';
 
@@ -64,9 +64,15 @@ export function Footer() {
             <h4 className="mb-6 font-medium">Contact</h4>
             <ul className="space-y-4 font-light">
               <li>
-                <a href="mailto:info@Cofandi.com" className="flex items-center gap-3 text-white/80 hover:text-white transition-colors">
+                <a href="mailto:cofandi.inc.ca@gmail.com" className="flex items-center gap-3 text-white/80 hover:text-white transition-colors">
                   <Mail size={16} className="text-white" />
-                  info@Cofandi.com
+                  cofandi.inc.ca@gmail.com
+                </a>
+              </li>
+              <li>
+                <a href="tel:+15145604627" className="flex items-center gap-3 text-white/80 hover:text-white transition-colors">
+                  <Phone size={16} className="text-white" />
+                  (514) 560-4627
                 </a>
               </li>
               <li className="text-white/80">

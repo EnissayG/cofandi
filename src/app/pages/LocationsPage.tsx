@@ -45,12 +45,6 @@ export function LocationsPage() {
       floor: 'Rez-de-chaussée'
     },
     {
-      name: 'Wynn HB Building',
-      address: '1455 Boulevard de Maisonneuve O',
-      hours: 'Lun-Ven: 7h - 21h | Sam-Dim: 9h - 18h',
-      floor: '2e étage, zone commune'
-    },
-    {
       name: 'GW McConnell Building',
       address: '1400 Boulevard de Maisonneuve O',
       hours: 'Lun-Ven: 7h - 22h | Sam-Dim: 9h - 20h',
@@ -103,7 +97,7 @@ export function LocationsPage() {
             className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto"
             style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 300 }}
           >
-            Machines Cofandi disponibles dans 10 bâtiments. De nouveaux emplacements de machines seront bientôt ajoutés.
+            Machines Cofandi sur plus de 10 emplacements. De nouveaux emplacements seront bientôt ajoutés.
           </p>
         </div>
       </section>
@@ -112,14 +106,10 @@ export function LocationsPage() {
 
       <section className="py-16 px-6 lg:px-12 bg-white">
         <div className="max-w-[1200px] mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 text-center">
+          <div className="grid md:grid-cols-3 gap-10 md:gap-8 text-center">
             <div className="space-y-2">
-              <p 
-                className="text-5xl md:text-6xl font-semibold text-primary"
-              >
-                10
-              </p>
-              <p 
+              <p className="text-5xl md:text-6xl font-semibold text-primary">10+</p>
+              <p
                 className="text-xl text-gray-600"
                 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 400 }}
               >
@@ -127,16 +117,21 @@ export function LocationsPage() {
               </p>
             </div>
             <div className="space-y-2">
-              <p 
-                className="text-5xl md:text-6xl font-semibold text-primary"
-              >
-                7h-23h
-              </p>
-              <p 
+              <p className="text-5xl md:text-6xl font-semibold text-primary">5000+</p>
+              <p
                 className="text-xl text-gray-600"
                 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 400 }}
               >
-                Horaires étendus
+                Boissons vendues par mois
+              </p>
+            </div>
+            <div className="space-y-2">
+              <p className="text-5xl md:text-6xl font-semibold text-primary">99&nbsp;%</p>
+              <p
+                className="text-xl text-gray-600"
+                style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 400 }}
+              >
+                Taux de satisfaction
               </p>
             </div>
           </div>

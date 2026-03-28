@@ -5,7 +5,6 @@ const locations = [
   'J. Renaud Science Complex',
   'Recreation and Athletic Complex',
   'Instant Hall',
-  'Wynn HB',
   'GW McConnell Building',
   'Visual Art Building',
   'Faubourg Building',

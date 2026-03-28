@@ -1,4 +1,4 @@
-import { Sparkles, Clock, Shield, Coffee, BadgeCheck } from 'lucide-react';
+import { Sparkles, Clock, Shield, Coffee } from 'lucide-react';
 
 const features = [
   {
@@ -15,11 +15,6 @@ const features = [
     icon: Shield,
     title: 'Fiabilité garantie',
     description: 'Un service disponible 24/7 avec un entretien régulier et un support technique réactif.'
-  },
-  {
-    icon: BadgeCheck,
-    title: 'Fairtrade',
-    description: 'Un café issu du commerce équitable, pour un impact positif tout au long de la chaîne d’approvisionnement.'
   },
   {
     icon: Coffee,
@@ -41,7 +36,7 @@ export function WhyCofandi() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8 items-stretch">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 items-stretch">
           {features.map((feature, index) => (
             <div
               key={index}
