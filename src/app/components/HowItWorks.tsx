@@ -42,7 +42,7 @@ export function HowItWorks() {
             <div className="relative w-full" style={{ paddingTop: '56.25%' }}>
               <iframe
                 className="absolute inset-0 w-full h-full"
-                src="https://www.youtube-nocookie.com/embed/sJCQqvdKVTk?rel=0&modestbranding=1"
+                src="https://www.youtube-nocookie.com/embed/WGokvgBxv1g?rel=0&modestbranding=1"
                 title="Comment acheter un café (vidéo étudiant)"
                 loading="lazy"
                 referrerPolicy="strict-origin-when-cross-origin"
