@@ -2,12 +2,13 @@ import { ArrowRight, MapPin } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useState, useEffect } from 'react';
 import { asset } from '../utils/asset';
+import { useI18n } from '../../i18n/I18nProvider';
 
-const heroImages = [asset('hero-cup1.png'), asset('hero-cup2.png')];
+const cups = [asset('hero-cup1.png'), asset('hero-cup2.png')];
 
 export function Hero() {
+  const { t } = useI18n();
   const [currentCup, setCurrentCup] = useState(0);
-  const cups = heroImages;
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -15,7 +16,7 @@ export function Hero() {
     }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [cups.length]);
 
   return (
     <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 px-6 lg:px-12 overflow-hidden">
@@ -24,16 +25,16 @@ export function Hero() {
           <div className="space-y-8 md:space-y-10">
             <div className="space-y-6">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-primary leading-tight">
-                L'expérience café premium, réinventée
+                {t('hero.title')}
               </h1>
               <p className="text-lg md:text-xl text-gray-600 font-light leading-relaxed max-w-xl">
-                Des boissons de qualité supérieure, disponibles en libre-service dans les espaces que vous fréquentez.
+                {t('hero.subtitle')}
               </p>
             </div>
 
             <div className="flex items-center gap-3 text-gray-700 bg-gray-50 rounded-full px-6 py-3 w-fit">
               <MapPin size={20} className="text-primary" />
-              <span className="font-normal">Disponible sur le campus Concordia</span>
+              <span className="font-normal">{t('hero.campus')}</span>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -41,14 +42,14 @@ export function Hero() {
                 href="#emplacements"
                 className="px-10 py-4 bg-primary text-white rounded-[28px] hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group font-medium"
               >
-                Trouver une machine
+                {t('hero.ctaFind')}
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </a>
               <a
                 href="#pourquoi"
                 className="px-10 py-4 bg-white text-primary rounded-[28px] border-2 border-primary hover:bg-gray-50 transition-all duration-300 font-medium"
               >
-                En savoir plus
+                {t('hero.ctaMore')}
               </a>
             </div>
           </div>
@@ -58,32 +59,32 @@ export function Hero() {
               <motion.div
                 key={currentCup}
                 initial={{ opacity: 0, scale: 0.9, rotate: -3 }}
-                animate={{ 
-                  opacity: 1, 
-                  scale: 1, 
+                animate={{
+                  opacity: 1,
+                  scale: 1,
                   rotate: 0,
                 }}
                 exit={{ opacity: 0, scale: 0.9, rotate: 3 }}
-                transition={{ 
+                transition={{
                   duration: 1.2,
-                  ease: [0.43, 0.13, 0.23, 0.96]
+                  ease: [0.43, 0.13, 0.23, 0.96],
                 }}
                 className="absolute inset-0 flex items-center justify-center"
               >
-                <motion.div 
+                <motion.div
                   className="relative w-full h-full max-w-[400px] mx-auto"
-                  animate={{ 
+                  animate={{
                     y: [0, -10, 0],
                   }}
                   transition={{
                     duration: 3,
                     repeat: Infinity,
-                    ease: "easeInOut"
+                    ease: 'easeInOut',
                   }}
                 >
-                  <img 
+                  <img
                     src={cups[currentCup]}
-                    alt={currentCup === 0 ? "Café Cofandi avec latte art" : "Tasse Cofandi fermée"}
+                    alt={currentCup === 0 ? t('hero.alt1') : t('hero.alt2')}
                     className="w-full h-full object-contain drop-shadow-2xl"
                     fetchPriority="high"
                   />
@@ -98,11 +99,12 @@ export function Hero() {
               {cups.map((_, index) => (
                 <button
                   key={index}
+                  type="button"
                   onClick={() => setCurrentCup(index)}
                   className={`w-2 h-2 rounded-full transition-all duration-300 ${
                     currentCup === index ? 'bg-primary w-8' : 'bg-primary/30 hover:bg-primary/50'
                   }`}
-                  aria-label={`Voir la tasse ${index + 1}`}
+                  aria-label={`${t('hero.ariaCup')} ${index + 1}`}
                 />
               ))}
             </div>

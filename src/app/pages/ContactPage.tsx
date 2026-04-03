@@ -1,8 +1,11 @@
 import { ContactForm } from '../components/ContactForm';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { SectionWave } from '../components/SectionWave';
+import { useI18n } from '../../i18n/I18nProvider';
 
 export function ContactPage() {
+  const { t } = useI18n();
+
   return (
     <div className="pt-32 pb-20">
       <section className="py-20 px-6 lg:px-12 bg-gradient-to-br from-primary to-primary/90">
@@ -44,7 +47,7 @@ export function ContactPage() {
               <h3 
                 className="text-xl font-semibold text-primary"
               >
-                Email
+                {t('contactPage.email')}
               </h3>
               <a
                 href="mailto:cofandi.inc.ca@gmail.com"
@@ -78,12 +81,12 @@ export function ContactPage() {
               <h3 
                 className="text-xl font-semibold text-primary"
               >
-                Adresse
+                {t('contactPage.address')}
               </h3>
               <p 
-className="text-gray-600 font-normal"
+className="text-gray-600 font-normal whitespace-pre-line"
               >
-                Montréal, QC<br />Canada
+                {t('contactPage.addressLines')}
               </p>
             </div>
           </div>

@@ -1,38 +1,29 @@
 import { GraduationCap, Building2, Hotel, Users } from 'lucide-react';
-
-const useCases = [
-  {
-    icon: GraduationCap,
-    title: 'Universités & Campus',
-    description: 'Une solution idéale pour les étudiants et le personnel académique en quête de qualité et de rapidité.'
-  },
-  {
-    icon: Building2,
-    title: 'Espaces corporatifs',
-    description: 'Offrez à vos employés une expérience café premium sans quitter le bureau.'
-  },
-  {
-    icon: Hotel,
-    title: 'Hôtels & Hébergements',
-    description: 'Proposez à vos clients un service de boissons disponible 24/7 dans vos espaces communs.'
-  },
-  {
-    icon: Users,
-    title: 'Espaces publics',
-    description: 'Salles d\'attente, centres communautaires et autres lieux à fort passage.'
-  }
-];
+import { useMemo } from 'react';
+import { useI18n } from '../../i18n/I18nProvider';
 
 export function UseCases() {
+  const { t } = useI18n();
+
+  const useCases = useMemo(
+    () => [
+      { icon: GraduationCap, titleKey: 'useCases.uc1t', descKey: 'useCases.uc1d' },
+      { icon: Building2, titleKey: 'useCases.uc2t', descKey: 'useCases.uc2d' },
+      { icon: Hotel, titleKey: 'useCases.uc3t', descKey: 'useCases.uc3d' },
+      { icon: Users, titleKey: 'useCases.uc4t', descKey: 'useCases.uc4d' },
+    ],
+    []
+  );
+
   return (
     <section className="py-24 md:py-32 px-6 lg:px-12 bg-white">
       <div className="max-w-[1440px] mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-primary mb-6 leading-tight">
-            Pour tous les environnements
+            {t('useCases.title')}
           </h2>
           <p className="text-lg md:text-xl text-gray-600 font-light leading-relaxed">
-            Cofandi s'adapte parfaitement aux besoins de différents types d'établissements.
+            {t('useCases.subtitle')}
           </p>
         </div>
 
@@ -48,8 +39,8 @@ export function UseCases() {
                   <useCase.icon size={28} className="text-primary" strokeWidth={1.5} />
                 </div>
               </div>
-              <h3 className="text-xl font-medium text-primary mb-4 relative">{useCase.title}</h3>
-              <p className="text-gray-600 font-light leading-relaxed relative">{useCase.description}</p>
+              <h3 className="text-xl font-medium text-primary mb-4 relative">{t(useCase.titleKey)}</h3>
+              <p className="text-gray-600 font-light leading-relaxed relative">{t(useCase.descKey)}</p>
             </div>
           ))}
         </div>

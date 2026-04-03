@@ -1,9 +1,11 @@
 import { ArrowRight, Mail, Phone, MapPin, CheckCircle, AlertCircle } from 'lucide-react';
 import { useState } from 'react';
+import { useI18n } from '../../i18n/I18nProvider';
 
 const FORM_NAME = 'contact';
 
 export function ContactForm() {
+  const { t } = useI18n();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -33,7 +35,7 @@ export function ContactForm() {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body
       });
-      if (!res.ok) throw new Error('Erreur réseau');
+      if (!res.ok) throw new Error('network');
       setStatus('success');
       setFormData({
         name: '',
@@ -63,11 +65,9 @@ export function ContactForm() {
           <div className="space-y-8">
             <div className="space-y-6">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-primary leading-tight">
-                Contactez-nous
+                {t('contactForm.heading')}
               </h2>
-              <p className="text-lg md:text-xl text-gray-600 font-light leading-relaxed">
-                Nous sommes là pour répondre à toutes vos questions et vous accompagner dans votre projet.
-              </p>
+              <p className="text-lg md:text-xl text-gray-600 font-light leading-relaxed">{t('contactForm.intro')}</p>
             </div>
 
             <div className="space-y-4">
@@ -76,7 +76,7 @@ export function ContactForm() {
                   <Mail size={20} className="text-primary" />
                 </div>
                 <div>
-                  <h3 className="mb-2 font-medium text-primary">Email</h3>
+                  <h3 className="mb-2 font-medium text-primary">{t('contactForm.emailLabel')}</h3>
                   <a href="mailto:cofandi.inc.ca@gmail.com" className="text-gray-600 hover:text-primary transition-colors font-light">
                     cofandi.inc.ca@gmail.com
                   </a>
@@ -88,7 +88,7 @@ export function ContactForm() {
                   <Phone size={20} className="text-primary" />
                 </div>
                 <div>
-                  <h3 className="mb-2 font-medium text-primary">Téléphone</h3>
+                  <h3 className="mb-2 font-medium text-primary">{t('contactForm.phoneLabel')}</h3>
                   <a href="tel:+15145604627" className="text-gray-600 hover:text-primary transition-colors font-light">
                     (514) 560-4627
                   </a>
@@ -100,8 +100,8 @@ export function ContactForm() {
                   <MapPin size={20} className="text-primary" />
                 </div>
                 <div>
-                  <h3 className="mb-2 font-medium text-primary">Localisation</h3>
-                  <p className="text-gray-600 font-light">Montréal, Québec<br />Canada</p>
+                  <h3 className="mb-2 font-medium text-primary">{t('contactForm.locationLabel')}</h3>
+                  <p className="text-gray-600 font-light whitespace-pre-line">{t('contactForm.locationValue')}</p>
                 </div>
               </div>
             </div>
@@ -126,18 +126,20 @@ export function ContactForm() {
               {status === 'success' && (
                 <div className="flex items-center gap-3 p-4 rounded-[16px] bg-green-50 text-green-800">
                   <CheckCircle size={24} className="flex-shrink-0 text-green-600" />
-                  <p className="font-medium">Message envoyé. Nous vous recontacterons rapidement.</p>
+                  <p className="font-medium">{t('contactForm.success')}</p>
                 </div>
               )}
               {status === 'error' && (
                 <div className="flex items-center gap-3 p-4 rounded-[16px] bg-red-50 text-red-800">
                   <AlertCircle size={24} className="flex-shrink-0 text-red-600" />
-                  <p className="font-medium">Une erreur est survenue. Réessayez ou contactez-nous par email.</p>
+                  <p className="font-medium">{t('contactForm.error')}</p>
                 </div>
               )}
 
               <div>
-                <label htmlFor="name" className="block mb-2 text-gray-700 font-normal">Nom complet *</label>
+                <label htmlFor="name" className="block mb-2 text-gray-700 font-normal">
+                  {t('contactForm.name')}
+                </label>
                 <input
                   type="text"
                   id="name"
@@ -146,12 +148,14 @@ export function ContactForm() {
                   value={formData.name}
                   onChange={handleChange}
                   className="w-full px-5 py-4 rounded-[16px] border border-gray-200 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all font-light"
-                  placeholder="Votre nom"
+                  placeholder={t('contactForm.namePh')}
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block mb-2 text-gray-700 font-normal">Email *</label>
+                <label htmlFor="email" className="block mb-2 text-gray-700 font-normal">
+                  {t('contactForm.email')}
+                </label>
                 <input
                   type="email"
                   id="email"
@@ -160,12 +164,14 @@ export function ContactForm() {
                   value={formData.email}
                   onChange={handleChange}
                   className="w-full px-5 py-4 rounded-[16px] border border-gray-200 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all font-light"
-                  placeholder="votre@email.com"
+                  placeholder={t('contactForm.emailPh')}
                 />
               </div>
 
               <div>
-                <label htmlFor="phone" className="block mb-2 text-gray-700 font-normal">Téléphone</label>
+                <label htmlFor="phone" className="block mb-2 text-gray-700 font-normal">
+                  {t('contactForm.phone')}
+                </label>
                 <input
                   type="tel"
                   id="phone"
@@ -173,12 +179,14 @@ export function ContactForm() {
                   value={formData.phone}
                   onChange={handleChange}
                   className="w-full px-5 py-4 rounded-[16px] border border-gray-200 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all font-light"
-                  placeholder="+1 (514) 123-4567"
+                  placeholder={t('contactForm.phonePh')}
                 />
               </div>
 
               <div>
-                <label htmlFor="organization" className="block mb-2 text-gray-700 font-normal">Organisation</label>
+                <label htmlFor="organization" className="block mb-2 text-gray-700 font-normal">
+                  {t('contactForm.org')}
+                </label>
                 <input
                   type="text"
                   id="organization"
@@ -186,12 +194,14 @@ export function ContactForm() {
                   value={formData.organization}
                   onChange={handleChange}
                   className="w-full px-5 py-4 rounded-[16px] border border-gray-200 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all font-light"
-                  placeholder="Nom de votre entreprise ou institution"
+                  placeholder={t('contactForm.orgPh')}
                 />
               </div>
 
               <div>
-                <label htmlFor="reason" className="block mb-2 text-gray-700 font-normal">Raison du contact *</label>
+                <label htmlFor="reason" className="block mb-2 text-gray-700 font-normal">
+                  {t('contactForm.reason')}
+                </label>
                 <select
                   id="reason"
                   name="reason"
@@ -200,18 +210,20 @@ export function ContactForm() {
                   onChange={handleChange}
                   className="w-full px-5 py-4 rounded-[16px] border border-gray-200 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all bg-white font-light"
                 >
-                  <option value="">Sélectionnez une option</option>
-                  <option value="installation">Demande d'installation</option>
-                  <option value="demo">Demande de démonstration</option>
-                  <option value="devis">Demande de devis</option>
-                  <option value="maintenance">Maintenance et support</option>
-                  <option value="partenariat">Opportunité de partenariat</option>
-                  <option value="autre">Autre question</option>
+                  <option value="">{t('contactForm.selectPlaceholder')}</option>
+                  <option value="installation">{t('contactForm.opt_install')}</option>
+                  <option value="demo">{t('contactForm.opt_demo')}</option>
+                  <option value="devis">{t('contactForm.opt_quote')}</option>
+                  <option value="maintenance">{t('contactForm.opt_maintenance')}</option>
+                  <option value="partenariat">{t('contactForm.opt_partner')}</option>
+                  <option value="autre">{t('contactForm.opt_other')}</option>
                 </select>
               </div>
 
               <div>
-                <label htmlFor="message" className="block mb-2 text-gray-700 font-normal">Message *</label>
+                <label htmlFor="message" className="block mb-2 text-gray-700 font-normal">
+                  {t('contactForm.message')}
+                </label>
                 <textarea
                   id="message"
                   name="message"
@@ -220,7 +232,7 @@ export function ContactForm() {
                   onChange={handleChange}
                   rows={5}
                   className="w-full px-5 py-4 rounded-[16px] border border-gray-200 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all resize-none font-light"
-                  placeholder="Décrivez votre projet ou posez-nous vos questions..."
+                  placeholder={t('contactForm.messagePh')}
                 />
               </div>
 
@@ -229,7 +241,7 @@ export function ContactForm() {
                 disabled={status === 'sending'}
                 className="w-full px-10 py-4 bg-primary text-white rounded-[28px] hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group font-medium disabled:opacity-70 disabled:cursor-not-allowed"
               >
-                {status === 'sending' ? 'Envoi en cours...' : 'Envoyer le message'}
+                {status === 'sending' ? t('contactForm.sending') : t('contactForm.submit')}
                 {status !== 'sending' && <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />}
               </button>
             </form>

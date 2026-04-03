@@ -1,38 +1,29 @@
 import { Sparkles, Clock, Shield, Coffee } from 'lucide-react';
-
-const features = [
-  {
-    icon: Sparkles,
-    title: 'Qualité premium',
-    description: 'Des boissons préparées avec des ingrédients de première qualité pour une expérience gustative exceptionnelle.'
-  },
-  {
-    icon: Clock,
-    title: 'Rapidité et simplicité',
-    description: 'Obtenez votre boisson en quelques secondes grâce à notre interface intuitive et notre technologie avancée.'
-  },
-  {
-    icon: Shield,
-    title: 'Fiabilité garantie',
-    description: 'Un service disponible 24/7 avec un entretien régulier et un support technique réactif.'
-  },
-  {
-    icon: Coffee,
-    title: 'Large sélection',
-    description: 'Du café classique aux boissons spécialisées, découvrez une variété adaptée à tous les goûts.'
-  }
-];
+import { useMemo } from 'react';
+import { useI18n } from '../../i18n/I18nProvider';
 
 export function WhyCofandi() {
+  const { t } = useI18n();
+
+  const features = useMemo(
+    () => [
+      { icon: Sparkles, titleKey: 'why.f1t', descKey: 'why.f1d' },
+      { icon: Clock, titleKey: 'why.f2t', descKey: 'why.f2d' },
+      { icon: Shield, titleKey: 'why.f3t', descKey: 'why.f3d' },
+      { icon: Coffee, titleKey: 'why.f4t', descKey: 'why.f4d' },
+    ],
+    []
+  );
+
   return (
     <section id="pourquoi" className="py-24 md:py-32 px-6 lg:px-12 bg-gray-50">
       <div className="max-w-[1440px] mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-primary mb-6 leading-tight">
-            Pourquoi choisir Cofandi ?
+            {t('why.title')}
           </h2>
           <p className="text-lg md:text-xl text-gray-600 font-light leading-relaxed">
-            Une expérience pensée pour répondre aux besoins des environnements modernes et exigeants.
+            {t('why.subtitle')}
           </p>
         </div>
 
@@ -47,8 +38,8 @@ export function WhyCofandi() {
                   <feature.icon size={28} className="text-primary" strokeWidth={1.5} />
                 </div>
               </div>
-              <h3 className="text-xl font-medium text-primary mb-4">{feature.title}</h3>
-              <p className="text-gray-600 font-light leading-relaxed mt-auto">{feature.description}</p>
+              <h3 className="text-xl font-medium text-primary mb-4">{t(feature.titleKey)}</h3>
+              <p className="text-gray-600 font-light leading-relaxed mt-auto">{t(feature.descKey)}</p>
             </div>
           ))}
         </div>

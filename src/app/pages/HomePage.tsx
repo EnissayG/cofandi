@@ -4,6 +4,7 @@ import { HowItWorks } from '../components/HowItWorks';
 import { MachineShowcase } from '../components/MachineShowcase';
 import { Locations } from '../components/Locations';
 import { UseCases } from '../components/UseCases';
+import { ContactForm } from '../components/ContactForm';
 import { SectionWave } from '../components/SectionWave';
 
 export function HomePage() {
@@ -16,6 +17,8 @@ export function HomePage() {
       <MachineShowcase />
       <Locations />
       <UseCases />
+      <SectionWave className="text-gray-50" />
+      <ContactForm />
     </>
   );
 }

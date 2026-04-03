@@ -1,39 +1,28 @@
 import { Smartphone, SlidersHorizontal, CreditCard } from 'lucide-react';
-
-const steps = [
-  {
-    icon: Smartphone,
-    step: '01',
-    title: 'Sélectionnez votre boisson',
-    description:
-      "Parcourez le menu sur l'écran tactile et choisissez la boisson qui vous fait envie parmi notre sélection."
-  },
-  {
-    icon: SlidersHorizontal,
-    step: '02',
-    title: 'Personnalisez votre boisson',
-    description:
-      'Ajustez les options à votre goût : intensité, teneur en sucre, type de lait ou autres réglages selon la boisson choisie.'
-  },
-  {
-    icon: CreditCard,
-    step: '03',
-    title: 'Effectuez le paiement',
-    description:
-      'Payez par carte ou sans contact. Rapide, sécurisé, puis la machine prépare votre boisson.'
-  }
-];
+import { useMemo } from 'react';
+import { useI18n } from '../../i18n/I18nProvider';
 
 export function HowItWorks() {
+  const { t } = useI18n();
+
+  const steps = useMemo(
+    () => [
+      { icon: Smartphone, step: '01', titleKey: 'how.s1t', descKey: 'how.s1d' },
+      { icon: SlidersHorizontal, step: '02', titleKey: 'how.s2t', descKey: 'how.s2d' },
+      { icon: CreditCard, step: '03', titleKey: 'how.s3t', descKey: 'how.s3d' },
+    ],
+    []
+  );
+
   return (
     <section id="comment" className="py-24 md:py-32 px-6 lg:px-12 bg-white">
       <div className="max-w-[1440px] mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-primary mb-6 leading-tight">
-            Comment ça marche ?
+            {t('how.title')}
           </h2>
           <p className="text-lg md:text-xl text-gray-600 font-light leading-relaxed">
-            Trois étapes simples pour obtenir votre boisson préférée.
+            {t('how.subtitle')}
           </p>
         </div>
 
@@ -43,7 +32,7 @@ export function HowItWorks() {
               <iframe
                 className="absolute inset-0 w-full h-full"
                 src="https://www.youtube-nocookie.com/embed/WGokvgBxv1g?rel=0&modestbranding=1"
-                title="Comment acheter un café (vidéo étudiant)"
+                title={t('how.videoTitle')}
                 loading="lazy"
                 referrerPolicy="strict-origin-when-cross-origin"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -55,7 +44,7 @@ export function HowItWorks() {
 
         <div className="grid md:grid-cols-3 gap-8 md:gap-12">
           {steps.map((step, index) => (
-            <div key={index} className="relative">
+            <div key={step.step} className="relative">
               {index < steps.length - 1 && (
                 <div className="hidden md:block absolute top-16 left-[60%] w-[80%] h-[2px] bg-gradient-to-r from-primary/30 to-transparent" />
               )}
@@ -68,8 +57,8 @@ export function HowItWorks() {
                     <step.icon size={32} className="text-primary" strokeWidth={1.5} />
                   </div>
                 </div>
-                <h3 className="text-xl md:text-2xl font-medium text-primary mb-4">{step.title}</h3>
-                <p className="text-gray-600 font-light leading-relaxed">{step.description}</p>
+                <h3 className="text-xl md:text-2xl font-medium text-primary mb-4">{t(step.titleKey)}</h3>
+                <p className="text-gray-600 font-light leading-relaxed">{t(step.descKey)}</p>
               </div>
             </div>
           ))}
