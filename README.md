@@ -1,6 +1,6 @@
 # Cofandi
 
-Site vitrine pour Cofandi — expérience café premium en libre-service sur le campus Concordia.
+Site vitrine pour Cofandi : expérience café premium en libre-service sur le campus Concordia.
 
 ## Stack
 
@@ -81,4 +81,4 @@ src/
 
 ## Licence
 
-Projet privé — Cofandi.
+Projet privé, Cofandi.

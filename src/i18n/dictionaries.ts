@@ -289,7 +289,7 @@ export const fr = {
       {
         title: 'Service rapide',
         description:
-          'Préparation rapide sans compromis sur la qualité — moins de 60 secondes.',
+          'Préparation rapide sans compromis sur la qualité, en moins de 60 secondes.',
       },
       {
         title: 'Maintenance préventive',
@@ -309,14 +309,14 @@ export const fr = {
       'Café glacé',
       'Chocolat chaud',
     ],
-    altMachine: 'Machine Cofandi — vue complète',
+    altMachine: 'Machine Cofandi, vue complète',
     altInterface: "Détail de l'interface Cofandi",
     altCloseup: 'Café premium Cofandi',
     ctaTitle: 'Intéressé par nos machines ?',
     ctaSubtitle:
       "Contactez-nous pour une démonstration ou pour discuter de l'installation d'une machine Cofandi dans votre établissement.",
     ctaBtn: 'Demander une démo',
-    faqTitle: 'FAQ — Machines Cofandi',
+    faqTitle: 'FAQ machines Cofandi',
     faqIntro:
       'Les réponses aux questions les plus fréquentes sur l’installation, l’utilisation et le service.',
     faq: [
@@ -374,7 +374,7 @@ export const fr = {
   seo: {
     pages: {
       home: {
-        title: 'Cofandi — Café premium en libre-service | Montréal',
+        title: 'Cofandi : café premium en libre-service | Montréal',
         description:
           'Machines à café premium en libre-service : qualité barista, paiement sans contact, campus Concordia. Installation pour universités, bureaux et hôtels au Québec.',
       },
@@ -389,14 +389,14 @@ export const fr = {
           'Technologie et design premium : extraction barista, écran tactile HD, paiement sans contact Nayax, maintenance incluse. Demandez une démo.',
       },
       locations: {
-        title: 'Emplacements | Cofandi — Campus Concordia',
+        title: 'Emplacements | Cofandi, campus Concordia',
         description:
           'Plus de 10 emplacements de machines Cofandi sur le campus Concordia à Montréal. Horaires et adresses par bâtiment.',
       },
       contact: {
         title: 'Contact | Cofandi',
         description:
-          'Contactez Cofandi pour une installation, une démo ou un devis. Montréal, Québec — email, téléphone et formulaire.',
+          'Contactez Cofandi pour une installation, une démo ou un devis. Montréal, Québec : email, téléphone et formulaire.',
       },
     },
   },
@@ -453,7 +453,7 @@ export const en: Messages = {
       '24/7 service with regular maintenance and responsive technical support.',
     f4t: 'Wide selection',
     f4d:
-      'From classic coffee to specialty drinks—something for every taste.',
+      'From classic coffee to specialty drinks, something for every taste.',
   },
   how: {
     title: 'How it works',
@@ -467,7 +467,7 @@ export const en: Messages = {
       'Adjust strength, sugar, milk type and other options depending on your drink.',
     s3t: 'Pay',
     s3d:
-      'Pay by card or contactless—quick and secure—then the machine prepares your drink.',
+      'Pay by card or contactless. Quick and secure, then the machine prepares your drink.',
   },
   showcase: {
     title: 'Elegant design, advanced technology',
@@ -478,7 +478,7 @@ export const en: Messages = {
     f3: 'Regular preventive maintenance',
     f4: 'Compact, elegant design',
     cta: 'Discover our machines',
-    alt1: 'Cofandi machine — full view',
+    alt1: 'Cofandi machine, full view',
     alt2: 'Cofandi interface detail',
     alt3: 'Premium Cofandi coffee',
   },
@@ -513,10 +513,10 @@ export const en: Messages = {
       'Redefining self-service coffee with elegance and technology',
     storyIntro: 'Our story',
     storyParagraphs: [
-      'Cofandi began as a student-led initiative driven by a shared goal: make quality coffee accessible to everyone—simply and without hassle.',
-      'In a daily rhythm of study, work and travel, they quickly saw a clear problem: getting a good coffee often takes time. Lines, inconsistent quality, unreliable experiences—all of it undermines a moment that should matter in your day.',
+      'Cofandi began as a student-led initiative driven by a shared goal: make quality coffee accessible to everyone, simply and without hassle.',
+      'In a daily rhythm of study, work and travel, they quickly saw a clear problem: getting a good coffee often takes time. Lines, inconsistent quality, unreliable experiences: all of it undermines a moment that should matter in your day.',
       'Rather than accept that, they chose to rethink the experience entirely.',
-      'That is how Cofandi was born—a new take on automated coffee, built to deliver consistent quality, no waiting, and access whenever you need it.',
+      'That is how Cofandi was born: a new take on automated coffee, built to deliver consistent quality, no waiting, and access whenever you need it.',
       'A simple, efficient and fast solution that removes lines while still offering barista-worthy coffee.',
       'Beyond the student context, the vision has always been clear: let anyone, anywhere, easily access a modern, reliable and enjoyable coffee experience.',
       'Today, Cofandi fits into universities, companies, hotels and public spaces, with one goal: raise the bar for self-service coffee through simplicity, speed and consistency.',
@@ -603,55 +603,55 @@ export const en: Messages = {
       {
         name: 'Hall Building',
         address: '1455 Boulevard de Maisonneuve O',
-        hours: 'Mon–Fri: 7 a.m. – 10 p.m. | Sat–Sun: 9 a.m. – 8 p.m.',
+        hours: 'Mon-Fri: 7 a.m. - 10 p.m. | Sat-Sun: 9 a.m. - 8 p.m.',
         floor: 'Ground floor, near the main entrance',
       },
       {
         name: 'EV Building',
         address: '1515 Rue Sainte-Catherine O',
-        hours: 'Mon–Fri: 7 a.m. – 10 p.m. | Sat–Sun: 9 a.m. – 8 p.m.',
+        hours: 'Mon-Fri: 7 a.m. - 10 p.m. | Sat-Sun: 9 a.m. - 8 p.m.',
         floor: '1st floor, near the cafeteria',
       },
       {
         name: 'Library Building',
         address: '1400 Boulevard de Maisonneuve O',
-        hours: 'Mon–Fri: 7 a.m. – 11 p.m. | Sat–Sun: 9 a.m. – 11 p.m.',
+        hours: 'Mon-Fri: 7 a.m. - 11 p.m. | Sat-Sun: 9 a.m. - 11 p.m.',
         floor: '2nd floor, study area',
       },
       {
         name: 'J. Renaud Science Complex',
         address: '7141 Rue Sherbrooke O',
-        hours: 'Mon–Fri: 7 a.m. – 9 p.m. | Sat–Sun: 10 a.m. – 6 p.m.',
+        hours: 'Mon-Fri: 7 a.m. - 9 p.m. | Sat-Sun: 10 a.m. - 6 p.m.',
         floor: 'Main hall, 1st floor',
       },
       {
         name: 'Recreation and Athletic Complex',
         address: '7200 Rue Sherbrooke O',
-        hours: 'Mon–Fri: 6 a.m. – 10 p.m. | Sat–Sun: 8 a.m. – 8 p.m.',
+        hours: 'Mon-Fri: 6 a.m. - 10 p.m. | Sat-Sun: 8 a.m. - 8 p.m.',
         floor: 'Main entrance, lobby',
       },
       {
         name: 'Instant Hall',
         address: '1400 Boulevard de Maisonneuve O',
-        hours: 'Mon–Fri: 7 a.m. – 10 p.m. | Sat–Sun: 9 a.m. – 7 p.m.',
+        hours: 'Mon-Fri: 7 a.m. - 10 p.m. | Sat-Sun: 9 a.m. - 7 p.m.',
         floor: 'Ground floor',
       },
       {
         name: 'GW McConnell Building',
         address: '1400 Boulevard de Maisonneuve O',
-        hours: 'Mon–Fri: 7 a.m. – 10 p.m. | Sat–Sun: 9 a.m. – 8 p.m.',
+        hours: 'Mon-Fri: 7 a.m. - 10 p.m. | Sat-Sun: 9 a.m. - 8 p.m.',
         floor: 'Entrance hall',
       },
       {
         name: 'Visual Art Building',
         address: '1395 Boulevard René-Lévesque O',
-        hours: 'Mon–Fri: 8 a.m. – 9 p.m. | Sat–Sun: 10 a.m. – 6 p.m.',
+        hours: 'Mon-Fri: 8 a.m. - 9 p.m. | Sat-Sun: 10 a.m. - 6 p.m.',
         floor: 'Ground floor, near the studios',
       },
       {
         name: 'Hall West Building',
         address: '1400 Boulevard de Maisonneuve O',
-        hours: 'Mon–Fri: 7 a.m. – 10 p.m. | Sat–Sun: 9 a.m. – 8 p.m.',
+        hours: 'Mon-Fri: 7 a.m. - 10 p.m. | Sat-Sun: 9 a.m. - 8 p.m.',
         floor: 'Near the main entrance',
       },
     ],
@@ -686,7 +686,7 @@ export const en: Messages = {
       },
       {
         title: 'Fast service',
-        description: 'Quick preparation without sacrificing quality—under 60 seconds.',
+        description: 'Quick preparation without sacrificing quality, under 60 seconds.',
       },
       {
         title: 'Preventive maintenance',
@@ -694,7 +694,7 @@ export const en: Messages = {
       },
     ],
     drinksTitle: 'Wide range of drinks',
-    drinksSubtitle: 'From classic coffee to specialty drinks—find your favourite',
+    drinksSubtitle: 'From classic coffee to specialty drinks, find your favourite',
     drinks: [
       'Espresso',
       'Americano',
@@ -705,14 +705,14 @@ export const en: Messages = {
       'Iced coffee',
       'Hot chocolate',
     ],
-    altMachine: 'Cofandi machine — full view',
+    altMachine: 'Cofandi machine, full view',
     altInterface: 'Cofandi interface detail',
     altCloseup: 'Premium Cofandi coffee',
     ctaTitle: 'Interested in our machines?',
     ctaSubtitle:
       'Contact us for a demo or to discuss installing a Cofandi machine at your venue.',
     ctaBtn: 'Request a demo',
-    faqTitle: 'FAQ — Cofandi machines',
+    faqTitle: 'FAQ machines Cofandi',
     faqIntro:
       'Answers to common questions about installation, use and service.',
     faq: [
@@ -770,7 +770,7 @@ export const en: Messages = {
   seo: {
     pages: {
       home: {
-        title: 'Cofandi — Premium self-service coffee | Montreal',
+        title: 'Cofandi: premium self-service coffee | Montreal',
         description:
           'Premium self-service coffee machines: barista-quality drinks, contactless payment, Concordia campus. Installations for universities, offices and hotels in Quebec.',
       },
@@ -785,14 +785,14 @@ export const en: Messages = {
           'Premium tech and design: barista extraction, HD touchscreen, Nayax contactless payment, maintenance included. Request a demo.',
       },
       locations: {
-        title: 'Locations | Cofandi — Concordia campus',
+        title: 'Locations | Cofandi, Concordia campus',
         description:
           '10+ Cofandi machine locations on Concordia campus in Montreal. Hours and addresses by building.',
       },
       contact: {
         title: 'Contact | Cofandi',
         description:
-          'Contact Cofandi for installation, a demo or a quote. Montreal, Quebec — email, phone and form.',
+          'Contact Cofandi for installation, a demo or a quote. Montreal, Quebec: email, phone and form.',
       },
     },
   },

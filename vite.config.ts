@@ -23,7 +23,7 @@ function cofandiSeoPlugin(): Plugin {
         url: home,
         logo: ogImage,
         description:
-          "Machines à café premium en libre-service — Montréal, Québec. Qualité barista, paiement sans contact, campus Concordia.",
+          "Machines à café premium en libre-service, Montréal, Québec. Qualité barista, paiement sans contact, campus Concordia.",
         areaServed: { '@type': 'Place', name: 'Montréal, Québec, Canada' },
       }
       const block = `    <link rel="canonical" href="${home}" data-cofandi-seo="canonical" />
