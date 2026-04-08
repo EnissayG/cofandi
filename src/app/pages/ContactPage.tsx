@@ -50,10 +50,10 @@ export function ContactPage() {
                 {t('contactPage.email')}
               </h3>
               <a
-                href="mailto:cofandi.inc.ca@gmail.com"
+                href="mailto:info@cofandiservice.com"
                 className="text-gray-600 hover:text-primary transition-colors font-normal"
               >
-                cofandi.inc.ca@gmail.com
+                info@cofandiservice.com
               </a>
             </div>
 

@@ -77,8 +77,8 @@ export function ContactForm() {
                 </div>
                 <div>
                   <h3 className="mb-2 font-medium text-primary">{t('contactForm.emailLabel')}</h3>
-                  <a href="mailto:cofandi.inc.ca@gmail.com" className="text-gray-600 hover:text-primary transition-colors font-light">
-                    cofandi.inc.ca@gmail.com
+                  <a href="mailto:info@cofandiservice.com" className="text-gray-600 hover:text-primary transition-colors font-light">
+                    info@cofandiservice.com
                   </a>
                 </div>
               </div>

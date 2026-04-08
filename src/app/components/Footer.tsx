@@ -77,11 +77,11 @@ export function Footer() {
             <ul className="space-y-4 font-light">
               <li>
                 <a
-                  href="mailto:cofandi.inc.ca@gmail.com"
+                  href="mailto:info@cofandiservice.com"
                   className="flex items-center gap-3 text-white/80 hover:text-white transition-colors"
                 >
                   <Mail size={16} className="text-white" />
-                  cofandi.inc.ca@gmail.com
+                  info@cofandiservice.com
                 </a>
               </li>
               <li>
